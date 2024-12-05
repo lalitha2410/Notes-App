@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Notes App</h1>
+        
+        <!-- Input for new task -->
+        <input type="text" id="new-note" placeholder="Write your task here..." onkeydown="checkEnter(event)">
+        
+        <!-- Add Task Button -->
+        <button id="add-task" onclick="addTaskFromInput()">Add Task</button>
+        
+        <!-- Task list -->
+        <ul id="task-list"></ul>
+        
+        <!-- Clear All Button (Initially hidden) -->
+        <button id="clear-all" onclick="clearAllTasks()" style="display:none;">Clear All</button>
+        
+        <!-- Success Message (Initially hidden) -->
+        <p id="success-message" style="display:none; color: green;">Good job! All tasks are completed.</p>
+    </div>
+
+    <audio id="alarm-sound" src="alarm.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
